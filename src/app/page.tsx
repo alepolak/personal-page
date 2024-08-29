@@ -1,95 +1,35 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+      <header>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1> Alexis Polak </h1>
+          <h2> Software Engineer</h2>
         </div>
-      </div>
-
-      <div className={styles.center}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/profile.jpg"
+          width={500}
+          height={500}
+          alt="Picture of the author"
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </header>
+      <nav>
+        <Link href="https://www.linkedin.com/in/alexispolak/" passHref={true} target="_blank"> LinkedIn </Link>
+        <Link href="https://seldoonstudio.com/" passHref={true} target="_blank"> Games </Link>
+        <Link href="https://github.com/alepolak" passHref={true} target="_blank"> Github </Link>
+      </nav>
+      <article>
+        <p>
+          Hi there! My name is Alexis Polak and I'm an Argentinian Software Engineer living in New York and currently working at <Link href="https://mural.co" passHref={true} target="_blank">Mural</Link>. Throughout my career I had the opportunity to work with different technologies at different companies, for example at Mural I started working with C# and UWP but now I'm on the mobile team using Typescript and React.
+        </p>
+        <p>
+          On my spare time I really enjoy cooking and eating, specially ramen. I'm into minimalism, AI, I love making and playing videogames and learn about techology. You can find some of my projects on the project section Github or in my game related website called Seldoon Studios.
+        </p>
+      </article>
     </main>
   );
 }
